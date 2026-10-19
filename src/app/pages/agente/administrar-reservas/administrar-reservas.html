@@ -1,0 +1,134 @@
+<section class="administrar-reservas-page">
+
+  <div class="container py-5">
+
+    <div class="text-center mb-5">
+
+      <h1 class="fw-bold">
+        Administrar reservas
+      </h1>
+
+      <p class="text-muted">
+        Consulta las solicitudes recibidas y revisa el estado de cada reserva.
+      </p>
+
+    </div>
+
+    <div class="card border-0 shadow-sm reservas-card">
+
+      <div class="card-body p-0">
+
+        <div class="table-responsive">
+
+          <table class="table table-hover align-middle mb-0">
+
+            <thead class="table-primary">
+
+              <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Evento</th>
+                <th>Fecha</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              @for (reserva of reservas; track reserva.id) {
+
+                <tr>
+
+                  <td>
+                    #{{ reserva.id }}
+                  </td>
+
+                  <td class="fw-semibold">
+                    {{ reserva.cliente }}
+                  </td>
+
+                  <td>
+                    {{ reserva.evento }}
+                  </td>
+
+                  <td>
+                    {{ reserva.fecha }}
+                  </td>
+
+                  <td>
+                    {{ reserva.cantidad }}
+                  </td>
+
+                  <td>
+
+                    @if (reserva.estado === 'Aprobada') {
+
+                      <span class="badge text-bg-success">
+                        {{ reserva.estado }}
+                      </span>
+
+                    } @else if (reserva.estado === 'Pendiente') {
+
+                      <span class="badge text-bg-warning">
+                        {{ reserva.estado }}
+                      </span>
+
+                    } @else {
+
+                      <span class="badge text-bg-danger">
+                        {{ reserva.estado }}
+                      </span>
+
+                    }
+
+                  </td>
+
+                  <td>
+
+                    <div class="d-flex flex-wrap gap-2">
+
+                      <button
+                        type="button"
+                        class="btn btn-success btn-sm">
+                        Aprobar
+                      </button>
+
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-sm">
+                        Rechazar
+                      </button>
+
+                    </div>
+
+                  </td>
+
+                </tr>
+
+              }
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="alert alert-info mt-4">
+
+      <strong>Nota:</strong>
+      En esta etapa los botones representan visualmente la administración
+      de las reservas. Los cambios de estado todavía no se almacenan
+      de forma permanente.
+
+    </div>
+
+  </div>
+
+</section>

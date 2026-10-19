@@ -1,0 +1,35 @@
+.mis-eventos-page {
+  min-height: calc(100vh - 56px);
+  background-color: #f8f9fa;
+}
+
+.evento-card {
+  border-radius: 18px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.evento-card:hover {
+  transform: translateY(-6px);
+}
+
+.evento-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  background-color: #e7f1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+h1,
+h2 {
+  color: #1f2937;
+}
+
+.btn {
+  border-radius: 10px;
+}

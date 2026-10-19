@@ -1,0 +1,94 @@
+<section class="mis-eventos-page">
+
+  <div class="container py-5">
+
+    <div class="text-center mb-5">
+
+      <h1 class="fw-bold">
+        Mis eventos
+      </h1>
+
+      <p class="text-muted">
+        Consulta los eventos registrados y revisa su información principal.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      @for (evento of eventos; track evento.id) {
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+          <div class="card evento-card h-100 border-0 shadow-sm">
+
+            <div class="card-body p-4">
+
+              <div class="evento-icon mb-3">
+                📅
+              </div>
+
+              <h2 class="h4 fw-bold">
+                {{ evento.nombre }}
+              </h2>
+
+              <p class="text-muted">
+                {{ evento.descripcion }}
+              </p>
+
+              <hr>
+
+              <p>
+                <strong>Fecha:</strong>
+                {{ evento.fecha }}
+              </p>
+
+              <p>
+                <strong>Hora:</strong>
+                {{ evento.hora }}
+              </p>
+
+              <p>
+                <strong>Lugar:</strong>
+                {{ evento.lugar }}
+              </p>
+
+              <p>
+                <strong>Capacidad:</strong>
+                {{ evento.capacidad }}
+              </p>
+
+              <p>
+                <strong>Cupos disponibles:</strong>
+                {{ evento.disponibles }}
+              </p>
+
+              <div class="d-grid gap-2 mt-4">
+
+                <button
+                  type="button"
+                  class="btn btn-outline-primary">
+                  Editar
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-outline-danger">
+                  Eliminar
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
