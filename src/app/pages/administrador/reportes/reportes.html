@@ -1,0 +1,111 @@
+<section class="reportes-page">
+
+  <div class="container py-5">
+
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">
+        Reportes administrativos
+      </h1>
+
+      <p class="text-muted">
+        Resumen general de la información registrada en la plataforma.
+      </p>
+    </div>
+
+    <div class="row g-4 mb-5">
+
+      @for (reporte of reportes; track reporte.categoria) {
+
+        <div class="col-12 col-sm-6 col-lg-3">
+
+          <div class="card reporte-card h-100 border-0 shadow-sm">
+
+            <div class="card-body text-center p-4">
+
+              <div class="reporte-icon mb-3">
+                📊
+              </div>
+
+              <h2 class="cantidad">
+                {{ reporte.cantidad }}
+              </h2>
+
+              <p class="mb-0 text-muted">
+                {{ reporte.categoria }}
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+    <div class="card border-0 shadow-sm tabla-card">
+
+      <div class="card-header bg-primary text-white">
+        <h2 class="h5 mb-0">
+          Resumen de reportes
+        </h2>
+      </div>
+
+      <div class="card-body p-0">
+
+        <div class="table-responsive">
+
+          <table class="table table-hover align-middle mb-0">
+
+            <thead class="table-light">
+
+              <tr>
+                <th>#</th>
+                <th>Categoría</th>
+                <th>Cantidad</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              @for (
+                reporte of reportes;
+                track reporte.categoria;
+                let i = $index
+              ) {
+
+                <tr>
+
+                  <td>
+                    {{ i + 1 }}
+                  </td>
+
+                  <td class="fw-semibold">
+                    {{ reporte.categoria }}
+                  </td>
+
+                  <td>
+                    <span class="badge text-bg-primary">
+                      {{ reporte.cantidad }}
+                    </span>
+                  </td>
+
+                </tr>
+
+              }
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
