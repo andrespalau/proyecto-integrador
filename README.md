@@ -1,59 +1,76 @@
-# ProyectoIntegradorWeb
+# Proyecto Integrador - Web 1
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.0.
+Aplicación frontend desarrollada en Angular para la gestión de eventos y reservas.
 
-## Development server
+## Tecnologías utilizadas
 
-To start a local development server, run:
+- Angular
+- TypeScript
+- HTML5
+- SCSS
+- Bootstrap 5
 
-```bash
-ng serve
-```
+## Módulos del sistema
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Auth
+- Inicio de sesión
+- Registro de usuarios
 
-## Code scaffolding
+### Cliente
+- Visualización de eventos disponibles
+- Realización de reservas
+- Consulta de reservas y su estado actual
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Agente
+- Registro de eventos
+- Visualización de eventos registrados
+- Administración de reservas
 
-```bash
-ng generate component component-name
-```
+### Administrador
+- Visualización de reportes del sistema mediante tablas y tarjetas informativas
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Datos mockeados
 
-```bash
-ng generate --help
-```
+En esta etapa del proyecto no se utiliza backend ni conexión con bases de datos.
 
-## Building
+La información se simula mediante servicios y datos mockeados en Angular para representar el funcionamiento futuro del sistema.
 
-To build the project run:
+Se utilizan datos mockeados para:
 
-```bash
-ng build
-```
+- Usuarios
+- Eventos
+- Reservas
+- Reportes
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Estructura del proyecto
 
-## Running unit tests
+El proyecto se encuentra organizado mediante:
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+- Componentes
+- Páginas
+- Interfaces
+- Servicios
+- Rutas de Angular
 
-```bash
-ng test
-```
+## Navegación
 
-## Running end-to-end tests
+La aplicación utiliza Angular Router para permitir la navegación entre los diferentes módulos y perfiles del sistema.
 
-For end-to-end (e2e) testing, run:
+## Alcance actual
 
-```bash
-ng e2e
-```
+En esta etapa se desarrolla principalmente la estructura visual y dinámica del frontend.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Todavía no se implementa:
 
-## Additional Resources
+- Backend
+- Base de datos
+- APIs reales
+- Autenticación real
+- Persistencia de información
+- Formularios completamente funcionales
+- Reservas reales
+- Actualización permanente de estados
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Autor
+
+Andrés Palau
