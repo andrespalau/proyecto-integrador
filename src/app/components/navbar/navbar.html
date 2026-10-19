@@ -1,0 +1,131 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container-fluid">
+
+    <a class="navbar-brand fw-bold" routerLink="/login">
+      Proyecto Integrador
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#menuPrincipal"
+      aria-controls="menuPrincipal"
+      aria-expanded="false"
+      aria-label="Abrir navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/login"
+            routerLinkActive="active">
+            Login
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/registro"
+            routerLinkActive="active">
+            Registro
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown">
+            Cliente
+          </a>
+
+          <ul class="dropdown-menu">
+
+            <li>
+              <a class="dropdown-item" routerLink="/cliente/eventos">
+                Eventos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" routerLink="/cliente/reservar">
+                Reservar
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" routerLink="/cliente/mis-reservas">
+                Mis reservas
+              </a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="nav-item dropdown">
+
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown">
+            Agente
+          </a>
+
+          <ul class="dropdown-menu">
+
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/agente/registrar-evento">
+                Registrar evento
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/agente/mis-eventos">
+                Mis eventos
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/agente/administrar-reservas">
+                Administrar reservas
+              </a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="nav-item">
+
+          <a
+            class="nav-link"
+            routerLink="/administrador/reportes"
+            routerLinkActive="active">
+            Reportes
+          </a>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
