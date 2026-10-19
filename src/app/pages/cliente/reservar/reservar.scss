@@ -1,0 +1,30 @@
+.reserva-page {
+  min-height: calc(100vh - 56px);
+  background-color: #f8f9fa;
+}
+
+.reserva-card {
+  border-radius: 20px;
+}
+
+h1 {
+  color: #1f2937;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  border-radius: 10px;
+}

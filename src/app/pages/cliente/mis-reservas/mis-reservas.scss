@@ -1,0 +1,31 @@
+.reservas-page {
+  min-height: calc(100vh - 56px);
+  background-color: #f8f9fa;
+}
+
+.reservas-card {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+h1 {
+  color: #1f2937;
+}
+
+table {
+  min-width: 700px;
+}
+
+th {
+  padding: 18px;
+}
+
+td {
+  padding: 16px 18px;
+}
+
+.badge {
+  min-width: 85px;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,91 @@
+<section class="eventos-page">
+
+  <div class="container py-5">
+
+    <div class="text-center mb-5">
+
+      <h1 class="fw-bold">
+        Eventos disponibles
+      </h1>
+
+      <p class="text-muted">
+        Consulta los eventos disponibles y revisa su información principal.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      @for (evento of eventos; track evento.id) {
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+          <div class="card evento-card h-100 border-0 shadow-sm">
+
+            <div class="card-body p-4">
+
+              <div class="evento-icon mb-3">
+                🎫
+              </div>
+
+              <h2 class="h4 fw-bold">
+                {{ evento.nombre }}
+              </h2>
+
+              <p class="text-muted">
+                {{ evento.descripcion }}
+              </p>
+
+              <hr>
+
+              <p>
+                <strong>Fecha:</strong>
+                {{ evento.fecha }}
+              </p>
+
+              <p>
+                <strong>Hora:</strong>
+                {{ evento.hora }}
+              </p>
+
+              <p>
+                <strong>Lugar:</strong>
+                {{ evento.lugar }}
+              </p>
+
+              <p>
+                <strong>Agente:</strong>
+                {{ evento.agente }}
+              </p>
+
+              <div class="d-flex justify-content-between mt-4">
+
+                <span class="badge text-bg-primary">
+                  Capacidad: {{ evento.capacidad }}
+                </span>
+
+                <span class="badge text-bg-success">
+                  Disponibles: {{ evento.disponibles }}
+                </span>
+
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-primary w-100 mt-4">
+                Reservar
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
